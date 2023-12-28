@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/aaa/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/newjava/app/src/main/res/layout/activity_story.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/newjava/app/src/main/res/layout/bhud_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/newjava/app/src/main/res/layout/br_notification.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/newjava/app/src/main/res/layout/main_render_screen.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/newjava/app/src/main/res/layout/window_dialog.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/$launcher_main_discord_ic__0.xml" value="0.121" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_button_bg.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_button_blue_bg.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_discord_ic.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_edit_text_bg.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_settings_gear_ic.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_telegram_ic__0.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_vk_ic.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_main_vk_ic__0.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/launcher_red_buttons_bg.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/nik_rectangle2.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/drawable/server_rectangle_choose.xml" value="0.1" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/activity_loader.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/activity_splash.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/activity_story.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/bhud_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/br_serverselect.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/br_serverselect_server.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/bspeed_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/custom_dialog.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/dialog_color_choose.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/dialog_settings_fps.xml" value="0.10260416666666666" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/dialog_settings_hud.xml" value="0.12552083333333333" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/download.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/fragment_donate.xml" value="0.12552083333333333" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/fragment_forum.xml" value="0.12552083333333333" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/fragment_loader.xml" value="0.264" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/fragment_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/fragment_monitoring.xml" value="0.22826086956521738" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/fragment_settings.xml" value="0.2" />
+        <entry key="..\:/aaa/!!!!!zakazi/1000/newjava/app/src/main/res/layout/menu_action_item.xml" value="0.10260416666666666" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/activity_loader.xml" value="0.2" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/activity_splash.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/activity_story.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/bhud_layout.xml" value="0.176" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/br_notification.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/br_serverselect.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/br_serverselect_server.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/bspeed_layout.xml" value="0.4" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/custom_dialog.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/dialog_color_choose.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/dialog_settings.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/dialog_settings_color.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/dialog_settings_fps.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/dialog_settings_hud.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/download.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/fragment_donate.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/fragment_forum.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/fragment_monitoring.xml" value="0.16799999999999998" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/hassle_tab.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/hassle_tab_item.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/item_change_nik.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/item_news.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/item_server.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/item_slider_story.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/loadingscreen.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/main_render_screen.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/menu_action_dialog.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/menu_action_item.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/sd_dialog.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/!!!BRILLIANT RUSSIA/java/app/src/main/res/layout/sd_dialog_item.xml" value="0.10989583333333333" />
+        <entry key="..\:/aaa/1.java/1000/java/app/src/main/res/layout/activity_loader.xml" value="0.11822916666666666" />
+        <entry key="..\:/aaa/1.java/1000/java/app/src/main/res/layout/donate_item.xml" value="0.536" />
+        <entry key="..\:/aaa/1.java/1000/java/app/src/main/res/layout/donate_reytiz.xml" value="0.4" />
+        <entry key="..\:/aaa/1.java/1000/java/app/src/main/res/layout/fragment_loader.xml" value="0.264" />
+        <entry key="..\:/aaa/2.zakazi/1000/java/app/src/main/res/layout/bhud_layout.xml" value="0.2" />
+        <entry key="..\:/aaa/2.zakazi/1000/java/app/src/main/res/layout/bspeed_layout.xml" value="0.536" />
+        <entry key="..\:/aaa/2.zakazi/1000/java/app/src/main/res/layout/fragment_donate.xml" value="0.1" />
+        <entry key="..\:/aaa/2.zakazi/1000/java/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/aaa/2.zakazi/1000/java/app/src/main/res/layout/main_render_screen.xml" value="0.2210144927536232" />
+        <entry key="..\:/aaa/2.zakazi/1000/java/app/src/main/res/layout/radial_menu.xml" value="0.536" />
+        <entry key="..\:/aaa/zakazi/1000/java/app/src/main/res/layout/fragment_main.xml" value="0.25" />
+        <entry key="..\:/aaa/zakazi/1000/java/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/../../!!!!!!!!!!!!!!!!!!!!!!!/!/!/!/!/!/!/!/!/!/!/!/!/!/!/!/!/!/newjava/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
