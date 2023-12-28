@@ -16,27 +16,19 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.core.content.res.ResourcesCompat;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
 import swaygames.online.R;
 import swaygames.online.gui.util.Utils;
-import swaygames.launcher.model.Servers;
-import swaygames.launcher.other.Interface;
+import swaygames.launcher.api.model.Servers;
+
 import com.nvidia.devtech.NvEventQueueActivity;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Formatter;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ChooseServer {
 
@@ -72,32 +64,8 @@ public class ChooseServer {
         allButton = aactivity.findViewById(R.id.all_servers_button);
         progressbar = aactivity.findViewById(R.id.progress_bar);
         mServers = new ArrayList<Servers>();
-        
-        Retrofit retrofit = new Retrofit.Builder()
-				.baseUrl("http://vbd.fdv.dd/")
-				.addConverterFactory(GsonConverterFactory.create())
-				.build();
 
-		Interface sInterface = retrofit.create(Interface.class);
-
-		Call<List<Servers>> scall = sInterface.getServers();
-
-		scall.enqueue(new Callback<List<Servers>>() {
-			@Override
-			public void onResponse(Call<List<Servers>> call, Response<List<Servers>> response) {
-
-				List<Servers> servers = response.body();
-
-				for (Servers server : servers) {
-					mServers.add(new Servers(server.getColor(), server.getDopname(), server.getname(), server.getOnline(), server.getmaxOnline()));
-				}
-			}
-
-			@Override
-			public void onFailure(Call<List<Servers>> call, Throwable t) {
-				Toast.makeText(activity, "Не удалось подключится к серверу, попробуйте перезайти", Toast.LENGTH_SHORT).show();
-			}
-		});
+        // добавить новые сервера
 		
         Utils.HideLayout(serverLayout, false);
     }

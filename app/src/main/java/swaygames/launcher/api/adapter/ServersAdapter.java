@@ -1,4 +1,4 @@
-package swaygames.launcher.adapter;
+package swaygames.launcher.api.adapter;
 
 import android.graphics.PorterDuff;
 import android.graphics.Color;
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.annotation.NonNull;
 
 import swaygames.online.R;
-import swaygames.launcher.model.Servers;
+import swaygames.launcher.api.model.Servers;
 import java.util.ArrayList;
 
 import com.dinuscxj.progressbar.CircleProgressBar;

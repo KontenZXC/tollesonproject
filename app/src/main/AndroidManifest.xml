@@ -37,11 +37,6 @@
         android:logo="@drawable/adtlogo"
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true">
-        <activity
-            android:name="swaygames.launcher.activity.StoryActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -59,12 +54,6 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
 
         <activity
-            android:name="swaygames.launcher.activity.SplashActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.WithSplash" />
-
-        <activity
             android:name="swaygames.launcher.activity.MainActivity"
             android:exported="true"
             android:screenOrientation="landscape"
@@ -74,10 +63,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="swaygames.launcher.activity.LoaderActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="android.max_aspect"

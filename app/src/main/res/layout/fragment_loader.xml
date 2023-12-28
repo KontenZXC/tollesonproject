@@ -9,7 +9,7 @@
 		android:fontFamily="@font/montserrat_bold"
 		android:lineSpacingMultiplier="0.9"
 		android:paddingStart="-3dp"
-		android:text="TEST\TEST"
+		android:text="SWAY\nMOBILE"
 		android:textAllCaps="true"
 		android:textColor="@color/white"
 		android:textSize="50.0sp"

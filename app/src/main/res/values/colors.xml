@@ -52,4 +52,6 @@
     <color name="colorAccent">#ffed4319</color>
     <color name="colorPrimary">#ff000000</color>
     <color name="colorPrimaryDark">#ff000000</color>
+    <color name="red_bg_queue_smi_dialog_15">#26e2310c</color>
+    <color name="red_bg_queue_smi_dialog">#ffe2310c</color>
 </resources>

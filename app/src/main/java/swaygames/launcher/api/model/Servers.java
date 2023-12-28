@@ -1,4 +1,4 @@
-package swaygames.launcher.model;
+package swaygames.launcher.api.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

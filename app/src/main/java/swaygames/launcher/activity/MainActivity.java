@@ -1,266 +1,161 @@
 package swaygames.launcher.activity;
 
-import android.Manifest;
-import android.os.Bundle;
-import android.os.Environment;
-import android.content.pm.PackageManager;
-
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
-import android.view.inputmethod.EditorInfo;
-import android.widget.*;
-
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
-
-import android.view.View.OnClickListener;
+import android.os.Bundle;
+import android.os.Environment;
+import android.text.Editable;
+import android.text.GetChars;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AnimationUtils;
-import android.view.animation.Animation;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import swaygames.online.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import org.ini4j.Wini;
 
 import java.io.File;
-
 import java.io.IOException;
-import java.util.*;
+
+import swaygames.online.R;
 
 public class MainActivity extends AppCompatActivity {
-	
-	EditText nickname;
-	ImageButton ib_info;
-    
-    @Override
+    public AppCompatButton button_play, button_settings;
+    public EditText nickname_input;
+    public String nick_as_ini = "";
+    public TextView nick_name_info;
+    public ImageButton info_nick_button, button_discord, button_vk, button_telegram;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_main);
-		
-		Animation animation = AnimationUtils.loadAnimation(this, R.anim.button_click);
-		
-		if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_DENIED) {
-            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO}, 1000);
-        }
-        
-        InitLogic();
-        
-        nickname = findViewById(R.id.edit_text_name);
-        ib_info = findViewById(R.id.ib_info);
-		
-	    ((AppCompatButton) findViewById(R.id.button_play)).setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                v.startAnimation(animation);
-                Timer t = new Timer();
-                t.schedule(new TimerTask(){
-                   @Override
-                   public void run() {
-                       onClickPlay();
-                   }
-                }, 200L);
-            }
-        });
-        
-        ((ImageButton) ib_info).setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                v.startAnimation(animation);
-                TextView info_nick = findViewById(R.id.text_view_info_about_nickname);
-                if(info_nick.getVisibility() == View.INVISIBLE)
-                    info_nick.setVisibility(View.VISIBLE);
-                else 
-                    info_nick.setVisibility(View.INVISIBLE);
-            }
-        });
-        
-        ((ImageButton) findViewById(R.id.button_vk)).setOnClickListener(new OnClickListener() {
-        	public void onClick(View v) {
-            	v.startAnimation(animation);
-        	    Timer t = new Timer();
-                t.schedule(new TimerTask(){
-                   @Override
-                   public void run() {
-                       startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://vk.com/blackrussia.online")));
-                   }
-                }, 200L);
-            }
-        });
-        
-        ((ImageButton) findViewById(R.id.button_discord)).setOnClickListener(new OnClickListener() {
-        	public void onClick(View v) {
-            	v.startAnimation(animation);
-        	    Timer t = new Timer();
-                t.schedule(new TimerTask(){
-                   @Override
-                   public void run() {
-                       startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://discord.gg/")));
-                   }
-                }, 200L);
-            }
-        });
-        
-        ((ImageButton) findViewById(R.id.button_telegram)).setOnClickListener(new OnClickListener() {
-        	public void onClick(View v) {
-            	v.startAnimation(animation);
-        	    Timer t = new Timer();
-                t.schedule(new TimerTask(){
-                   @Override
-                   public void run() {
-                       startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://t.me/br_dev")));
-                   }
-                }, 200L);
-            }
-        });
-        
-        ((AppCompatButton) findViewById(R.id.button_clean_game)).setOnClickListener(new OnClickListener() {
-        	public void onClick(View v) {
-            	v.startAnimation(animation);
-        	    Timer t = new Timer();
-                t.schedule(new TimerTask(){
-                   @Override
-                   public void run() {
-                       ToLoad();
-                   }
-                }, 200L);
-            }
-        });
-        
-        
-        ((EditText) nickname)
-                .setOnEditorActionListener(
-                        new EditText.OnEditorActionListener() {
-                            @Override
-                            public boolean onEditorAction(
-                                    TextView v, int actionId, KeyEvent event) {
-                                if (actionId == EditorInfo.IME_ACTION_SEARCH
-                                        || actionId == EditorInfo.IME_ACTION_DONE
-                                        || event.getAction() == KeyEvent.ACTION_DOWN
-                                                && event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
-                                    try {
-                                        File f =
-                                                new File(
-                                                        Environment.getExternalStorageDirectory()
-                                                                + "/Reytiz/SAMP/settings.ini");
-                                        if (!f.exists()) {
-                                            f.createNewFile();
-                                            f.mkdirs();
-                                        }
-                                        Wini w =
-                                                new Wini(
-                                                        new File(
-                                                                Environment.getExternalStorageDirectory()
-                                 + "/Reytiz/SAMP/settings.ini"));
-								 if(checkValidNick()){
-									 w.put("client", "name", nickname.getText().toString());
-                                        //Toast.makeText(this, "Ваш новый никнейм успешно сохранен!", Toast.LENGTH_SHORT).show();
-                                        tost("Ваш новый никнейм успешно сохранен!");
-								 } else {
-									 checkValidNick();
-								 }
-                                        w.store();
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                        tost("Установите игру!");
-                                    }
-                                }
-                                return false;
-                            }
-        });
-        
-        nickname.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-        
-            }
 
-             @Override
-             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                 try {
-                     File f = new File(Environment.getExternalStorageDirectory() + "/Reytiz/SAMP/settings.ini");
-                     if (!f.exists()) {
-                         f.createNewFile();
-                         f.mkdirs();
-                     }
-                     Wini w = new Wini(new File(Environment.getExternalStorageDirectory() + "/Reytiz/SAMP/settings.ini"));
-					 if(checkValidNick()){
-						w.put("client", "name", nickname.getText().toString());        
-					  } else {
-					      checkValidNick();
-					   }
-                       w.store();
-                       } catch (IOException e) {
-                           e.printStackTrace();
-                       }
-                 }
+        nickname_input = (EditText) findViewById(R.id.edit_text_name);
+        button_play = (AppCompatButton) findViewById(R.id.button_play);
+        button_settings = (AppCompatButton) findViewById(R.id.button_clean_game);
+        nick_name_info = (TextView) findViewById(R.id.text_view_info_about_nickname);
+        info_nick_button = (ImageButton) findViewById(R.id.ib_info);
+        button_discord = (ImageButton) findViewById(R.id.button_discord);
+        button_vk = (ImageButton) findViewById(R.id.button_vk);
+        button_telegram = (ImageButton) findViewById(R.id.button_telegram);
 
-             @Override
-             public void afterTextChanged(Editable editable) {
-        
-             }
-        });
-     }
-    
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode != 1000) {
-            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO}, 1000);
-        } 
+        ClickUserButtons();
+        RenderUserNickName();
+        ChangeUserNickName();
     }
 
-    public void onClickPlay() {
-        if(IsGameInstalled()) {
-            startActivity(new Intent(this, swaygames.online.core.GTASA.class));
-		} else {
-		   ToLoad();
-		}
+    private void ClickUserButtons() {
+        button_play.setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+
+            try {
+                Wini cache_get = new Wini(new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/SAMP/settings.ini"));
+                nick_as_ini = cache_get.get("client", "name");
+                cache_get.store();
+            } catch (Exception ioException) {
+                Log.e("ERROR CLICKS", "Cannot load nick string!");
+            }
+
+            if (nick_as_ini.isEmpty() || !nick_as_ini.contains("_")) {
+                nickname_input.setBackgroundResource(R.drawable.launcher_main_edit_text_red_bg);
+                nick_name_info.setVisibility(View.VISIBLE);
+            }
+
+        });
+
+        info_nick_button.setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+
+            if(nick_name_info.getVisibility() == View.INVISIBLE) {
+                nick_name_info.setVisibility(View.VISIBLE);
+            } else {
+                nick_name_info.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        button_discord.setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("discord.com/personkaa"));
+            startActivity(intent);
+        });
+
+        button_telegram.setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://t.me/regerds"));
+            startActivity(intent);
+        });
+
+        button_vk.setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("vk.com/"));
+            startActivity(intent);
+        });
+
+        button_settings.setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+            String nick = "";
+
+            try {
+                Wini cache_get = new Wini(new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/SAMP/settings.ini"));
+                nick = cache_get.get("client", "name");
+                cache_get.store();
+            } catch (Exception ioException) {
+                Log.e("ERROR CLICKS", "Cannot load nick string!");
+            }
+
+            if(nick.equals("Regerds_Regerds")) {
+                // сделать показ уи настроек
+            } else {
+                //Toast.makeText(MainActivity.this, "Настройки будут доступны в версии - 2.0", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-    
-    private boolean IsGameInstalled()
-    {
-        String CheckFile = Environment.getExternalStorageDirectory() + "/Reytiz/texdb/gta3.img";
-        File file = new File(CheckFile);
-        return file.exists();
-    }
-    
-    private void ToLoad()
-    {
-    	startActivity(new Intent(this, LoaderActivity.class));
-    }
-	
-	private void InitLogic() {
+
+    private void RenderUserNickName() {
         try {
-            Wini w = new Wini(new File(Environment.getExternalStorageDirectory() + "/Reytiz/SAMP/settings.ini"));
-            nickname = findViewById(R.id.edit_text_name);
-            nickname.setText(w.get("client", "name"));
-            w.store();
-        } catch (IOException e) {
-            e.printStackTrace();
+            Wini cache_get = new Wini(new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/SAMP/settings.ini"));
+            nickname_input.setText(String.valueOf(cache_get.get("client", "name")));
+            cache_get.store();
+        } catch (Exception ioException) {
+            Log.e("ERROR RENDER", "Cannot load nick string!");
         }
     }
-	
-	public boolean checkValidNick(){
-        EditText nick = (EditText) findViewById(R.id.edit_text_name);
-		if(nick.getText().toString().isEmpty()) {
-            tost("Введите ник");
-			return false;
-		}
-		if(!(nick.getText().toString().contains("_"))){
-            tost("Ник должен содержать символ \"_\"");
-			return false;
-		}
-		if(nick.getText().toString().length() < 4){
-            tost("Длина ника должна быть не менее 4 символов");
-			return false;
-		}
-		return true;
-	}
-	
-	private void tost(String pon)
-	{
-		Toast.makeText(this, pon, Toast.LENGTH_SHORT).show();
-	}
+
+    private void ChangeUserNickName() {
+        nickname_input.setOnEditorActionListener((textView, actionId, keyEvent) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE || keyEvent.getAction() == KeyEvent.ACTION_DOWN && keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                if(!textView.getText().toString().isEmpty() || textView.getText().toString().contains("_")) {
+                    try {
+                        if(nick_name_info.getVisibility() == View.VISIBLE) {
+                            nick_name_info.setVisibility(View.INVISIBLE);
+                            nickname_input.setBackgroundResource(R.drawable.launcher_main_edit_text_bg);
+                        }
+
+                        Wini cache_get = new Wini(new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/SAMP/settings.ini"));
+                        cache_get.put("client", "name", textView.getText().toString());
+                        cache_get.store();
+                    } catch (Exception ioException) {
+                        Toast.makeText(this, "Ошибка при обработке данных, попробуйте позже!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            return false;
+        });
+    }
 } 
