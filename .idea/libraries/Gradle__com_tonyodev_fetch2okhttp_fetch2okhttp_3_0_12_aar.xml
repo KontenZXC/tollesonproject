@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.tonyodev.fetch2okhttp:fetch2okhttp:3.0.12@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/398287a17d6873096673ff65460dc2f7/transformed/jetified-fetch2okhttp-3.0.12/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/398287a17d6873096673ff65460dc2f7/transformed/jetified-fetch2okhttp-3.0.12/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/398287a17d6873096673ff65460dc2f7/transformed/jetified-fetch2okhttp-3.0.12/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6e2994638094f18477b0ce5abf28eb80/transformed/jetified-fetch2okhttp-3.0.12/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e2994638094f18477b0ce5abf28eb80/transformed/jetified-fetch2okhttp-3.0.12/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e2994638094f18477b0ce5abf28eb80/transformed/jetified-fetch2okhttp-3.0.12/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tonyodev.fetch2okhttp/fetch2okhttp/3.0.12/2cb1bfea9cf5f10cf2755d773fd1fbd2d69a73a/fetch2okhttp-3.0.12-javadoc.jar!/" />

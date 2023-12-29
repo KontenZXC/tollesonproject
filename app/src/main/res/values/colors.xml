@@ -54,4 +54,9 @@
     <color name="colorPrimaryDark">#ff000000</color>
     <color name="red_bg_queue_smi_dialog_15">#26e2310c</color>
     <color name="red_bg_queue_smi_dialog">#ffe2310c</color>
+    <color name="red_bg_queue_smi_dialog_50">#80e2310c</color>
+    <color name="dark_bg_smi_dialog_67">#ab20212b</color>
+    <color name="color_B6BFD9">#ffb6bfd9</color>
+    <color name="dark_bg_smi_dialog_43">#6e20212b</color>
+    <color name="red_bg_queue_smi_dialog_25">#40e2310c</color>
 </resources>

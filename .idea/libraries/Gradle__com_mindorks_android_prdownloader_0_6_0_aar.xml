@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.mindorks.android:prdownloader:0.6.0@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3dc9f97ec7d021cf7cf2cb3af53e3937/transformed/jetified-prdownloader-0.6.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3dc9f97ec7d021cf7cf2cb3af53e3937/transformed/jetified-prdownloader-0.6.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3dc9f97ec7d021cf7cf2cb3af53e3937/transformed/jetified-prdownloader-0.6.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/297e04c0e3408809dc9091ed9b3bf2fd/transformed/jetified-prdownloader-0.6.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/297e04c0e3408809dc9091ed9b3bf2fd/transformed/jetified-prdownloader-0.6.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/297e04c0e3408809dc9091ed9b3bf2fd/transformed/jetified-prdownloader-0.6.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mindorks.android/prdownloader/0.6.0/bc25c37079e472ec27683efb19c9850d2ff3d231/prdownloader-0.6.0-javadoc.jar!/" />

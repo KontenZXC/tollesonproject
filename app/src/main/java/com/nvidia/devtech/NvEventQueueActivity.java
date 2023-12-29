@@ -57,6 +57,7 @@ import swaygames.online.R;
 import swaygames.online.core.DialogClientSettings;
 import swaygames.online.gui.HudManager;
 import swaygames.online.gui.BrDialogWindow;
+import swaygames.online.gui.NewChat;
 import swaygames.online.gui.Speedometer;
 import swaygames.online.gui.BrNotification;
 import swaygames.online.gui.Menu;
@@ -161,6 +162,8 @@ public abstract class NvEventQueueActivity
     private ChooseServer mChooseServer = null;
     private RadialMenu mRadialMenu = null;
     private Donate mDonate = null;
+
+    public NewChat newChat = null;
 
     /* *
      * Helper function to select fixed window size.
@@ -375,6 +378,9 @@ public abstract class NvEventQueueActivity
     public native void showTab();
 
     public native void togglePlayer(int toggle);
+
+    public native void SetRadarBgPos(float X, float Y, float scaleX, float scaleY);
+    public native void SetRadarPos(float X, float Y);
 
     /**
      * Helper class used to pass raw data around.  
@@ -1026,6 +1032,7 @@ public static void fixEditTextForAndroid10Xiaomi(EditText editText) {
         mChooseServer = new ChooseServer(this);
         mRadialMenu = new RadialMenu(this);
         mDonate = new Donate(this);
+        newChat = new NewChat(this);
 
         DoResumeEvent();
 
@@ -1682,5 +1689,9 @@ public static void fixEditTextForAndroid10Xiaomi(EditText editText) {
             micro = (findViewById(R.id.imageView14).getVisibility() == View.VISIBLE) ? true : false;
     	    findViewById(R.id.imageView14).setVisibility(View.GONE);
         });
+    }
+
+    public void addMessageToChat(String msg) {
+        runOnUiThread(() -> newChat.AddChatMessage(msg));
     }
 }

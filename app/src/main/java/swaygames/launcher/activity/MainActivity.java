@@ -1,13 +1,12 @@
 package swaygames.launcher.activity;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Environment;
-import android.text.Editable;
-import android.text.GetChars;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -17,15 +16,16 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import org.ini4j.Wini;
-
 import java.io.File;
-import java.io.IOException;
+import java.util.HashMap;
 
+import swaygames.launcher.Api;
+import swaygames.launcher.Downloader;
 import swaygames.online.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,10 +34,42 @@ public class MainActivity extends AppCompatActivity {
     public String nick_as_ini = "";
     public TextView nick_name_info;
     public ImageButton info_nick_button, button_discord, button_vk, button_telegram;
+    public FirebaseRemoteConfig firebaseRemoteConfig;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_main);
+
+        HashMap<String, Object> defaultsRate = new HashMap<>();
+        defaultsRate.put("json", String.valueOf(0));
+
+        firebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+        FirebaseRemoteConfigSettings settings = new FirebaseRemoteConfigSettings.Builder().setMinimumFetchIntervalInSeconds(1).build();
+        firebaseRemoteConfig.setConfigSettingsAsync(settings);
+        firebaseRemoteConfig.setDefaultsAsync(defaultsRate);
+
+        firebaseRemoteConfig.fetchAndActivate().addOnCompleteListener(MainActivity.this, task -> {
+            if(task.isSuccessful()) {
+                final String return_cache_link = firebaseRemoteConfig.getString("cache_link");
+                final String return_client_link = firebaseRemoteConfig.getString("client_link");
+                final String return_update_link = firebaseRemoteConfig.getString("update_link");
+                final int return_version_cache = Integer.valueOf(firebaseRemoteConfig.getString("version_cache"));
+                final int return_version_client = Integer.valueOf(firebaseRemoteConfig.getString("version_client"));
+
+                Api.setAllValues(return_cache_link, return_client_link, return_update_link, return_version_cache, return_version_client);
+            } else {
+                Toast.makeText(MainActivity.this, "Поддержка лаунчера прекращена!", Toast.LENGTH_SHORT).show();
+                new CountDownTimer(1000, 2000) {
+                    public void onTick(long l) {
+
+                    }
+
+                    public void onFinish() {
+                        onDestroy();
+                    }
+                }.start();
+            }
+        });
 
         nickname_input = (EditText) findViewById(R.id.edit_text_name);
         button_play = (AppCompatButton) findViewById(R.id.button_play);
@@ -51,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         ClickUserButtons();
         RenderUserNickName();
         ChangeUserNickName();
+        ShowDialogPrivacyPolicy();
     }
 
     private void ClickUserButtons() {
@@ -65,9 +98,35 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("ERROR CLICKS", "Cannot load nick string!");
             }
 
-            if (nick_as_ini.isEmpty() || !nick_as_ini.contains("_")) {
-                nickname_input.setBackgroundResource(R.drawable.launcher_main_edit_text_red_bg);
-                nick_name_info.setVisibility(View.VISIBLE);
+            if(CheckValidCache()) {
+                if (nick_as_ini.isEmpty() || !nick_as_ini.contains("_")) {
+                    nickname_input.setBackgroundResource(R.drawable.launcher_main_edit_text_red_bg);
+                    nick_name_info.setVisibility(View.VISIBLE);
+                } else {
+                    int cache_version = 0, client_version = 0;
+
+                    try {
+                        Wini cache_get = new Wini(new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/SAMP/launcher/config.ini"));
+                        cache_version = Integer.valueOf(cache_get.get("settings", "version_cache"));
+                        client_version = Integer.valueOf(cache_get.get("settings", "version_client"));
+                        cache_get.store();
+                    } catch (Exception ioException) {
+                        Log.e("ERROR CLICKS", "Cannot load nick string!");
+                    }
+
+                    /*if(cache_version != Api.version_cache) {
+                        Api.typeLoad = Api.eTypeLoad.UPDATE;
+                        startActivity(new Intent(MainActivity.this, Downloader.class));
+                    } else if(client_version != Api.version_client) {
+                        Api.typeLoad = Api.eTypeLoad.CLIENT;
+                        startActivity(new Intent(MainActivity.this, Downloader.class));
+                    } else if(cache_version == Api.version_cache || client_version == Api.version_client) {*/
+                        startActivity(new Intent(MainActivity.this, swaygames.online.core.GTASA.class));
+                    //}
+                }
+            } else {
+                Api.typeLoad = Api.eTypeLoad.FILES;
+                startActivity(new Intent(MainActivity.this, Downloader.class));
             }
 
         });
@@ -157,5 +216,31 @@ public class MainActivity extends AppCompatActivity {
 
             return false;
         });
+    }
+
+    private boolean CheckValidCache() {
+        File img = new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/texdb/gta3.img");
+        return img.exists();
+    }
+
+    @SuppressLint("ResourceType")
+    private void ShowDialogPrivacyPolicy() {
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.launcher_dialog_privacy);
+        dialog.setCancelable(false);
+        dialog.getWindow().setBackgroundDrawableResource(17170445);
+        dialog.getWindow().setLayout(-1, -2);
+
+        dialog.findViewById(R.id.button_ok).setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+            dialog.hide();
+        });
+
+        dialog.findViewById(R.id.button_no).setOnClickListener(view -> {
+            view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
+            onDestroy();
+        });
+
+        dialog.show();
     }
 } 

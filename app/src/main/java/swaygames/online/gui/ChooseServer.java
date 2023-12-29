@@ -66,6 +66,7 @@ public class ChooseServer {
         mServers = new ArrayList<Servers>();
 
         // добавить новые сервера
+        mServers.add(new Servers("ff0000", "", "SWAY GAMES | RED", 91, 100));
 		
         Utils.HideLayout(serverLayout, false);
     }

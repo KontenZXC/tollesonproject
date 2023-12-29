@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.skydoves:colorpickerpreference:2.0.4@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/827dd6ef6d3f6a866d355e1044cab11b/transformed/jetified-colorpickerpreference-2.0.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/827dd6ef6d3f6a866d355e1044cab11b/transformed/jetified-colorpickerpreference-2.0.4/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/827dd6ef6d3f6a866d355e1044cab11b/transformed/jetified-colorpickerpreference-2.0.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2f731b0d3992bcb60f6b1850ba65ed2a/transformed/jetified-colorpickerpreference-2.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2f731b0d3992bcb60f6b1850ba65ed2a/transformed/jetified-colorpickerpreference-2.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2f731b0d3992bcb60f6b1850ba65ed2a/transformed/jetified-colorpickerpreference-2.0.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.skydoves/colorpickerpreference/2.0.4/2ab0629978dd9a94faf7afc2551f7c5138c5d95b/colorpickerpreference-2.0.4-javadoc.jar!/" />

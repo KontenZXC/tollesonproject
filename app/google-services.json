@@ -1,37 +1,26 @@
 {
   "project_info": {
-    "project_number": "1019412995639",
-    "firebase_url": "https://black-russia-419fa-default-rtdb.firebaseio.com",
-    "project_id": "black-russia-419fa",
-    "storage_bucket": "black-russia-419fa.appspot.com"
+    "project_number": "106980365729",
+    "project_id": "sway-online-a73eb",
+    "storage_bucket": "sway-online-a73eb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1019412995639:android:cc8a779436f93ee219a9b2",
+        "mobilesdk_app_id": "1:106980365729:android:5f3f05089259268693e7e0",
         "android_client_info": {
           "package_name": "swaygames.online"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "1019412995639-8j85oa5va0hlo6rclm9tnktsrtkojfpg.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyChvEPu7XIf4oTMyXis21Z-fN3Z5Vhct-8"
+          "current_key": "AIzaSyCERETDR2exTpVLNyG3Yg5-QkLmrr_mGbE"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1019412995639-8j85oa5va0hlo6rclm9tnktsrtkojfpg.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

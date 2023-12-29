@@ -90,5 +90,12 @@
     <style name="MontserratRegular14sp"><item name="android:textSize">14.0sp</item><item name="android:textColor">@android:color/white</item><item name="android:fontFamily">@font/montserrat_regular</item></style>
 
     <style name="MontserratRegular12sp"><item name="android:textSize">12.0sp</item><item name="android:textColor">@android:color/white</item><item name="android:fontFamily">@font/montserrat_regular</item></style>
+
+    <style name="MontserratBold14spOr11ssp"><item name="android:textSize">@dimen/_11ssp</item><item name="android:textColor">@android:color/white</item><item name="android:fontFamily">@font/montserrat_bold</item></style>
+    <style name="MontserratRegular14spOr11ssp"><item name="android:textSize">@dimen/_11ssp</item><item name="android:textColor">@android:color/white</item><item name="android:fontFamily">@font/montserrat_regular</item></style>
+    <style name="MontserratBold13spOr10ssp"><item name="android:textSize">@dimen/_13ssp</item><item name="android:textColor">@android:color/white</item><item name="android:fontFamily">@font/montserrat_bold</item></style>
+
+    <dimen name="_11ssp">11.0sp</dimen>
+    <dimen name="_13ssp">13.0sp</dimen>
 </resources>
 

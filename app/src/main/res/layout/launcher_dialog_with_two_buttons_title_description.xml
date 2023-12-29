@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<View
+		android:id="@+id/view2"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="@color/dark_bg_smi_dialog_43"
+		android:visibility="invisible" />
+	<View android:visibility="invisible" android:id="@id/bg_effect_shadow" android:background="@drawable/fractions_buy_tokens_red_bg" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+	<View android:id="@id/main_view_dialog_privacy" android:background="@drawable/launcher_privacy_policy_bg" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="-20.0dip" android:layout_marginBottom="-20.0dip" app:layout_constraintBottom_toBottomOf="@id/button_no" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/text_view_title" app:layout_constraintWidth_percent="0.7" />
+	<TextView android:paddingTop="10dp" android:text="Тестовое тайтл" android:id="@id/text_view_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/text_view_description" app:layout_constraintEnd_toEndOf="@id/main_view_dialog_privacy" app:layout_constraintStart_toStartOf="@id/main_view_dialog_privacy" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="@style/MontserratBold14spOr11ssp" />
+	<TextView android:textColorLink="@color/white" android:gravity="center" android:id="@id/text_view_description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="20.0dip" app:layout_constraintBottom_toTopOf="@id/button_no" app:layout_constraintEnd_toEndOf="@id/main_view_dialog_privacy" app:layout_constraintStart_toStartOf="@id/main_view_dialog_privacy" app:layout_constraintTop_toBottomOf="@id/text_view_title" style="@style/MontserratRegular14spOr11ssp" />
+
+	<androidx.appcompat.widget.AppCompatButton
+		android:gravity="center"
+		android:id="@id/button_ok"
+		android:background="@drawable/launcher_red_buttons_bg"
+		android:layout_width="0.0dip"
+		android:layout_height="wrap_content"
+		android:text="@string/common_ok"
+		android:textAllCaps="true"
+		android:layout_marginStart="48.0dip"
+		app:layout_constraintBottom_toBottomOf="@id/button_no"
+		app:layout_constraintEnd_toStartOf="@id/button_no"
+		app:layout_constraintStart_toStartOf="@id/main_view_dialog_privacy"
+		app:layout_constraintTop_toTopOf="@id/button_no"
+		style="@style/MontserratBold13spOr10ssp" />
+
+	<androidx.appcompat.widget.AppCompatButton
+		android:visibility="visible"
+		android:id="@id/button_no"
+		style="@style/MontserratBold13spOr10ssp"
+		android:layout_width="0.0dip"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="48.0dip"
+		android:layout_marginEnd="48.0dip"
+		android:background="@drawable/launcher_blue_buttons_bg"
+		android:gravity="center"
+		android:text="@string/common_close"
+		android:textAllCaps="true"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@id/main_view_dialog_privacy"
+		app:layout_constraintStart_toEndOf="@id/button_ok"
+		app:layout_constraintTop_toBottomOf="@id/text_view_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

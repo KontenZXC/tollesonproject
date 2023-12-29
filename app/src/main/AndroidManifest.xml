@@ -64,6 +64,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="swaygames.launcher.Downloader"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />

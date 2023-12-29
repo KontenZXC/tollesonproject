@@ -85,5 +85,6 @@
         <include layout="@layout/donate_podt" />
         <include layout="@layout/window_dialog" />
         <include layout="@layout/br_serverselect" />
+        <include layout="@layout/chat_layout" />
     </FrameLayout>
 </FrameLayout>
