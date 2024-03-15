@@ -97,5 +97,79 @@
 
     <dimen name="_11ssp">11.0sp</dimen>
     <dimen name="_13ssp">13.0sp</dimen>
+    <style name="MontserratRegular11spOr9ssp">
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+    <style name="IphoneTextStyle">
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/helveticaneuecyr_bol</item>
+    </style>
+    <style name="ShapeAppearance.M3.Sys.Shape.Corner.Full" parent="">
+        <item name="cornerSize">50.0%</item>
+    </style>
+    <style name="TextAppearance.Tooltip" parent="@style/Widget.Material3.Tooltip">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Tooltip" parent="@style/Widget.Material3.Tooltip">
+        <item name="android:textAppearance">@style/TextAppearance.Tooltip</item>
+        <item name="backgroundTint">@color/red</item>
+    </style>
+    <style name="ShapeAppearance.Material3.Corner.Full" parent="@style/ShapeAppearance.M3.Sys.Shape.Corner.Full" />
+    <style name="ShapeAppearance.Material3.Tooltip" parent="@style/ShapeAppearance.Material3.Corner.Full" />
+    <style name="Widget.Material3.Tooltip" parent="@style/Widget.MaterialComponents.Tooltip">
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:padding">4.0dip</item>
+        <item name="android:layout_margin">2.0dip</item>
+        <item name="android:minWidth">28.0dip</item>
+        <item name="android:minHeight">28.0dip</item>
+        <item name="backgroundTint">?colorPrimary</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Tooltip</item>
+    </style>
+    <style name="Widget.Material3.Slider.Label" parent="@style/Widget.Material3.Tooltip">
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="backgroundTint">?colorPrimary</item>
+    </style>
+    <style name="Widget.Material3.Slider" parent="@style/Widget.MaterialComponents.Slider">
+    </style>
+    <style name="MontserratRegular12spOr9ssp">
+        <item name="android:textSize">@dimen/_9ssp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+    <style name="mySlider" parent="@style/Widget.Material3.Slider">
+        <item name="colorPrimary">@color/red</item>
+        <item name="haloColor">@color/red_50</item>
+        <item name="haloRadius">@dimen/_12sdp</item>
+        <item name="labelStyle">@style/Tooltip</item>
+        <item name="thumbColor">@color/red</item>
+        <item name="thumbRadius">@dimen/_5sdp</item>
+        <item name="tickColorActive">@color/red</item>
+        <item name="tickColorInactive">@color/white</item>
+        <item name="trackColorActive">@color/red</item>
+        <item name="trackColorInactive">@color/white</item>
+        <item name="trackHeight">@dimen/_2sdp</item>
+    </style>
+    <style name="TextViewPrimary">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextViewPrimary.MullerBold.11" parent="@style/TextViewPrimary.MullerBold">
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+    <style name="TextViewPrimary.MullerBold.7" parent="@style/TextViewPrimary.MullerBold">
+        <item name="android:textSize">@dimen/_7ssp</item>
+    </style>
+    <style name="TextViewPrimary.MullerBold.8" parent="@style/TextViewPrimary.MullerBold">
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+    <style name="TextViewPrimary.MullerBold" parent="@style/TextViewPrimary">
+        <item name="android:fontFamily">@font/muller_bold</item>
+    </style>
+    <style name="TextViewPrimary.MullerBold.10" parent="@style/TextViewPrimary.MullerBold">
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
 </resources>
 

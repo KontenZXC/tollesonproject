@@ -52,7 +52,11 @@
             android:name="swaygames.online.core.GTASA"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-
+        <activity
+            android:name="swaygames.launcher.activity.SettAct"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
         <activity
             android:name="swaygames.launcher.activity.MainActivity"
             android:exported="true"

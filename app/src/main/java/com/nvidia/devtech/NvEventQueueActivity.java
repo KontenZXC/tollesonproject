@@ -64,6 +64,10 @@ import swaygames.online.gui.Menu;
 import swaygames.online.gui.ChooseServer;
 import swaygames.online.gui.RadialMenu;
 import swaygames.online.gui.Donate;
+import swaygames.online.gui.nphone;
+import swaygames.online.gui.registration.GUIRegistration;
+import swaygames.online.gui.tollesonpass.tollesonpass;
+import swaygames.online.gui.util.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -162,8 +166,10 @@ public abstract class NvEventQueueActivity
     private ChooseServer mChooseServer = null;
     private RadialMenu mRadialMenu = null;
     private Donate mDonate = null;
-
+    public nphone mNphone = null;
     public NewChat newChat = null;
+    public GUIRegistration guiRegistration = null;
+    public tollesonpass mCalendar = null;
 
     /* *
      * Helper function to select fixed window size.
@@ -1025,6 +1031,8 @@ public static void fixEditTextForAndroid10Xiaomi(EditText editText) {
         mInputManager = new InputManager(this);
         mHeightProvider = new HeightProvider(this).init(mRootFrame).setHeightListener(this);
         mBrNotification = new BrNotification();
+        mNphone = new nphone(this);
+        mCalendar = new tollesonpass(this);
         mDialog = new BrDialogWindow(this);
         mHudManager = new HudManager(this);
         mSpeedometer = new Speedometer(this);
@@ -1033,6 +1041,7 @@ public static void fixEditTextForAndroid10Xiaomi(EditText editText) {
         mRadialMenu = new RadialMenu(this);
         mDonate = new Donate(this);
         newChat = new NewChat(this);
+        guiRegistration = new GUIRegistration(this);
 
         DoResumeEvent();
 
@@ -1472,6 +1481,16 @@ public static void fixEditTextForAndroid10Xiaomi(EditText editText) {
         //postCleanup();
     }
 
+    public void hidephone() {
+        Utils.HideLayout(mNphone.reytiz_layout, false);
+    }
+
+    public void hidecalendar() {
+        Utils.HideLayout(mCalendar.calendar, false);
+    }
+
+    public void showCalendar() { runOnUiThread(() -> { mCalendar.show(); } ); }
+
     public void callLauncherActivity()
     {
         runOnUiThread(new Runnable() {
@@ -1512,7 +1531,13 @@ public static void fixEditTextForAndroid10Xiaomi(EditText editText) {
     }
 
     public void showDialog(int dialogId, int dialogTypeId, String caption, String content, String leftBtnText, String rightBtnText) {
-        runOnUiThread(() -> { this.mDialog.show(dialogId, dialogTypeId, caption, content, leftBtnText, rightBtnText); });
+        runOnUiThread(() -> {
+            if(dialogId == 1) {
+                this.guiRegistration.ShowGUIRegistration();
+            } else {
+                this.mDialog.show(dialogId, dialogTypeId, caption, content, leftBtnText, rightBtnText);
+            }
+        });
     }
 
     
@@ -1586,6 +1611,8 @@ public static void fixEditTextForAndroid10Xiaomi(EditText editText) {
     public void showSpeed() { runOnUiThread(() -> { mSpeedometer.ShowSpeed(); }); } //setNativeHudElementScale(6, 5, 5);
 
     public void hideSpeed() { runOnUiThread(() -> { mSpeedometer.HideSpeed(); }); }
+
+    public void showReytiz(int reytiz) { runOnUiThread(() -> { mNphone.show(reytiz); } ); }
 
     public void RadarBR() { runOnUiThread(() -> { setNativeHudElementPosition(6, 5, 5); }); }
 

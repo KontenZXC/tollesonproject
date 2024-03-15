@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/casemain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="238dp"
+        android:layout_height="229dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="675dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.45"
+        android:background="@drawable/roulette_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:alpha="0.45"
+        android:background="@drawable/roulette_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toEndOf="@+id/imageView36"
+        app:layout_constraintTop_toTopOf="@+id/imageView36"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="252dp"
+        android:layout_height="162dp"
+        android:alpha="0.75"
+        android:background="@drawable/roulette_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toEndOf="@+id/imageView36"
+        app:layout_constraintTop_toBottomOf="@+id/imageView37"
+        app:layout_constraintVertical_bias="0.515" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="257dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.45"
+        android:background="@drawable/roulette_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/roulette_prize"
+        android:layout_width="257dp"
+        android:layout_height="224dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView39"
+        app:layout_constraintEnd_toEndOf="@+id/imageView39"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView39"
+        app:layout_constraintTop_toTopOf="@+id/imageView39"
+        app:layout_constraintVertical_bias="0.0">
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="72dp"
+            android:layout_height="52dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/roulette_prize"
+            app:layout_constraintEnd_toEndOf="@+id/roulette_prize"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="@+id/roulette_prize"
+            app:layout_constraintTop_toTopOf="@+id/roulette_prize"
+            app:layout_constraintVertical_bias="0.085" />
+
+        <TextView
+            android:id="@+id/textView31"
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZAZ 968"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="@+id/view4"
+            app:layout_constraintVertical_bias="0.972" />
+
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="72dp"
+            android:layout_height="51dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintEnd_toStartOf="@+id/view5"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toEndOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="@+id/view4"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView46"
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gazelle 3221"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintStart_toStartOf="@+id/view6"
+            app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="72dp"
+            android:layout_height="51dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="@+id/roulette_prize"
+            app:layout_constraintHorizontal_bias="0.853"
+            app:layout_constraintStart_toEndOf="@+id/view4"
+            app:layout_constraintTop_toTopOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/textView49"
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toyota Mark II"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="@+id/view5"
+            app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="72dp"
+            android:layout_height="52dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/roulette_prize"
+            app:layout_constraintEnd_toEndOf="@+id/roulette_prize"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="@+id/roulette_prize"
+            app:layout_constraintTop_toTopOf="@+id/roulette_prize"
+            app:layout_constraintVertical_bias="0.908" />
+
+        <TextView
+            android:id="@+id/textView48"
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="До 150000 р."
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="@+id/view7"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="@+id/view7"
+            app:layout_constraintTop_toTopOf="@+id/view7"
+            app:layout_constraintVertical_bias="0.944" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="72dp"
+            android:layout_height="51dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toStartOf="@+id/view12"
+            app:layout_constraintStart_toEndOf="@+id/view7"
+            app:layout_constraintTop_toTopOf="@+id/view7"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8 EXP"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView48"
+            app:layout_constraintEnd_toEndOf="@+id/view8"
+            app:layout_constraintStart_toStartOf="@+id/view8"
+            app:layout_constraintTop_toTopOf="@+id/textView48" />
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="72dp"
+            android:layout_height="51dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/view10"
+            app:layout_constraintEnd_toEndOf="@+id/roulette_prize"
+            app:layout_constraintHorizontal_bias="0.885"
+            app:layout_constraintStart_toEndOf="@+id/view10"
+            app:layout_constraintTop_toTopOf="@+id/view10" />
+
+        <TextView
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Секретный приз"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView47"
+            app:layout_constraintEnd_toEndOf="@+id/view9"
+            app:layout_constraintStart_toStartOf="@+id/view9"
+            app:layout_constraintTop_toTopOf="@+id/textView47" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="72dp"
+            android:layout_height="52dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/roulette_prize"
+            app:layout_constraintEnd_toEndOf="@+id/roulette_prize"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="@+id/roulette_prize"
+            app:layout_constraintTop_toTopOf="@+id/roulette_prize"
+            app:layout_constraintVertical_bias="0.497" />
+
+        <TextView
+            android:id="@+id/textView47"
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ford Mustang GT"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view10"
+            app:layout_constraintEnd_toEndOf="@+id/view10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/view10"
+            app:layout_constraintTop_toTopOf="@+id/view10"
+            app:layout_constraintVertical_bias="0.9" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="72dp"
+            android:layout_height="51dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/view10"
+            app:layout_constraintEnd_toStartOf="@+id/view9"
+            app:layout_constraintStart_toEndOf="@+id/view10"
+            app:layout_constraintTop_toTopOf="@+id/view10" />
+
+        <TextView
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 EXP"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView47"
+            app:layout_constraintEnd_toEndOf="@+id/view11"
+            app:layout_constraintStart_toStartOf="@+id/view11"
+            app:layout_constraintTop_toTopOf="@+id/textView47" />
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="72dp"
+            android:layout_height="51dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/background_car_roulette"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="@+id/roulette_prize"
+            app:layout_constraintHorizontal_bias="0.885"
+            app:layout_constraintStart_toEndOf="@+id/view7"
+            app:layout_constraintTop_toTopOf="@+id/view7" />
+
+        <TextView
+            style="@style/MontserratRegular11spOr9ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="До 100 TC"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView48"
+            app:layout_constraintEnd_toEndOf="@+id/view12"
+            app:layout_constraintStart_toStartOf="@+id/view12"
+            app:layout_constraintTop_toTopOf="@+id/textView48" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        style="@style/MontserratRegular11spOr9ssp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Недавно выйграли"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+        app:layout_constraintEnd_toEndOf="@+id/imageView36"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="@+id/imageView36"
+        app:layout_constraintTop_toTopOf="@+id/imageView36"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        style="@style/MontserratRegular11spOr9ssp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Бронзовый"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView37"
+        app:layout_constraintEnd_toEndOf="@+id/imageView37"
+        app:layout_constraintStart_toStartOf="@+id/imageView37"
+        app:layout_constraintTop_toTopOf="@+id/imageView37" />
+
+    <TextView
+        style="@style/MontserratRegular11spOr9ssp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Описание кейса"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView38"
+        app:layout_constraintEnd_toEndOf="@+id/imageView38"
+        app:layout_constraintStart_toStartOf="@+id/imageView38"
+        app:layout_constraintTop_toTopOf="@+id/imageView38" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

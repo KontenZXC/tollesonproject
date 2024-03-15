@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "106980365729",
-    "project_id": "sway-online-a73eb",
-    "storage_bucket": "sway-online-a73eb.appspot.com"
+    "project_number": "43591010991",
+    "project_id": "tolleson-pro",
+    "storage_bucket": "tolleson-pro.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:106980365729:android:5f3f05089259268693e7e0",
+        "mobilesdk_app_id": "1:43591010991:android:a7da1419beea08c19ea25a",
         "android_client_info": {
           "package_name": "swaygames.online"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCERETDR2exTpVLNyG3Yg5-QkLmrr_mGbE"
+          "current_key": "AIzaSyB21-joaUeB036exMM_XOdIJCHJ3HJ7eNM"
         }
       ],
       "services": {

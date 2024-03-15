@@ -146,4 +146,22 @@
     <item name="layout_history" type="id" />
     <item name="hint_recycler" type="id" />
     <item name="layout_main" type="id" />
+    <item name="reg_person" type="id" />
+    <item name="brlogo" type="id" />
+    <item name="health_bar" type="id" />
+    <item name="view8" type="id" />
+    <item name="reg_container" type="id" />
+    <item name="reg_header" type="id" />
+    <item name="reg_nickname" type="id" />
+    <item name="reg_info" type="id" />
+    <item name="reg_main_layout" type="id" />
+    <item name="back_but" type="id" />
+    <item name="fingerprint_but" type="id" />
+    <item name="password_enter" type="id" />
+    <item name="password_text" type="id" />
+    <item name="auto_text" type="id" />
+    <item name="auto_img" type="id" />
+    <item name="auto_switch" type="id" />
+    <item name="play_but" type="id" />
+    <item name="containermain" type="id" />
 </resources>

@@ -86,5 +86,6 @@
         <include layout="@layout/window_dialog" />
         <include layout="@layout/br_serverselect" />
         <include layout="@layout/chat_layout" />
+        <include layout="@layout/registration_view" />
     </FrameLayout>
 </FrameLayout>

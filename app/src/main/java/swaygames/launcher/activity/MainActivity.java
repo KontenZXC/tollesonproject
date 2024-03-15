@@ -1,8 +1,10 @@
 package swaygames.launcher.activity;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -22,8 +24,8 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import org.ini4j.Wini;
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
-
 import swaygames.launcher.Api;
 import swaygames.launcher.Downloader;
 import swaygames.online.R;
@@ -79,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
         button_discord = (ImageButton) findViewById(R.id.button_discord);
         button_vk = (ImageButton) findViewById(R.id.button_vk);
         button_telegram = (ImageButton) findViewById(R.id.button_telegram);
+
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_DENIED) {
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO}, 1000);
+        }
 
         ClickUserButtons();
         RenderUserNickName();
@@ -167,21 +173,8 @@ public class MainActivity extends AppCompatActivity {
 
         button_settings.setOnClickListener(view -> {
             view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.button_click));
-            String nick = "";
-
-            try {
-                Wini cache_get = new Wini(new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/SAMP/settings.ini"));
-                nick = cache_get.get("client", "name");
-                cache_get.store();
-            } catch (Exception ioException) {
-                Log.e("ERROR CLICKS", "Cannot load nick string!");
-            }
-
-            if(nick.equals("Regerds_Regerds")) {
-                // сделать показ уи настроек
-            } else {
-                //Toast.makeText(MainActivity.this, "Настройки будут доступны в версии - 2.0", Toast.LENGTH_SHORT).show();
-            }
+            Intent SecAct = new Intent(MainActivity.this, SettAct.class);
+            startActivity(SecAct);
         });
     }
 
@@ -191,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
             nickname_input.setText(String.valueOf(cache_get.get("client", "name")));
             cache_get.store();
         } catch (Exception ioException) {
-            Log.e("ERROR RENDER", "Cannot load nick string!");
+            Log.e("ERROR RENDER", "1Cannot load nick string!");
         }
     }
 
@@ -208,14 +201,22 @@ public class MainActivity extends AppCompatActivity {
                         Wini cache_get = new Wini(new File(Environment.getExternalStorageDirectory() + "/SwayCommunity/SAMP/settings.ini"));
                         cache_get.put("client", "name", textView.getText().toString());
                         cache_get.store();
-                    } catch (Exception ioException) {
-                        Toast.makeText(this, "Ошибка при обработке данных, попробуйте позже!", Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
                 }
             }
 
             return false;
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode != 1000) {
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO}, 1000);
+        }
     }
 
     private boolean CheckValidCache() {

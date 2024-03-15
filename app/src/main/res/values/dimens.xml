@@ -11,6 +11,10 @@
     <dimen name="_108sdp">108.0dip</dimen>
     <dimen name="_109sdp">109.0dip</dimen>
     <dimen name="_10sdp">10.0dip</dimen>
+    <dimen name="_9ssp">9.0sp</dimen>
+    <dimen name="_12ssp">12.0sp</dimen>
+    <dimen name="_18ssp">18.0sp</dimen>
+    <string name="black_pass_prize_but_get">Забрать</string>
     <dimen name="_110sdp">110.0dip</dimen>
     <dimen name="_111sdp">111.0dip</dimen>
     <dimen name="_112sdp">112.0dip</dimen>
@@ -52,6 +56,9 @@
     <dimen name="_145sdp">145.0dip</dimen>
     <dimen name="_146sdp">146.0dip</dimen>
     <dimen name="_147sdp">147.0dip</dimen>
+    <dimen name="_7ssp">7.0sp</dimen>
+    <dimen name="_10ssp">10.0sp</dimen>
+    <dimen name="_8ssp">8.0sp</dimen>
     <dimen name="_148sdp">148.0dip</dimen>
     <dimen name="_149sdp">149.0dip</dimen>
     <dimen name="_14sdp">14.0dip</dimen>

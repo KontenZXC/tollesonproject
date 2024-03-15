@@ -1,5 +1,6 @@
 package swaygames.online.gui;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -7,12 +8,15 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.nvidia.devtech.NvEventQueueActivity;
 import swaygames.online.R;
+import swaygames.online.gui.tollesonpass.tollesonpass;
 import swaygames.online.gui.util.Utils;
 
+import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
@@ -43,11 +47,19 @@ public class HudManager {
 
     public ProgressBar progressHP;
     public ProgressBar progressArmor;
+    public ImageView hud_noty;
+    public ImageView hud_mobile;
+
+    public ConstraintLayout maincontainer;
+
+    public tollesonpass mCalendar = null;
 
     public HudManager(Activity aactivity) {
         activity = aactivity;
         hud_layout = aactivity.findViewById(R.id.hud_main);
         hud_layout.setVisibility(View.GONE);
+        hud_mobile = aactivity.findViewById(R.id.imageView213);
+        hud_noty = aactivity.findViewById(R.id.imageView7);
 
         progressArmor = aactivity.findViewById(R.id.hud_armor_pb);
         progressHP = aactivity.findViewById(R.id.hud_health_pb);
@@ -71,6 +83,7 @@ public class HudManager {
         hud_wanted.add(activity.findViewById(R.id.hud_star_4));
         hud_wanted.add(activity.findViewById(R.id.hud_star_5));
         hud_wanted.add(activity.findViewById(R.id.hud_star_6));
+        mCalendar = new tollesonpass(aactivity);
         hud_micro.setOnClickListener( view -> {
             view.startAnimation(AnimationUtils.loadAnimation(aactivity, R.anim.button_click));
         });
@@ -79,6 +92,19 @@ public class HudManager {
             view.startAnimation(AnimationUtils.loadAnimation(aactivity, R.anim.button_click));
             NvEventQueueActivity.getInstance().showMenuu();
             NvEventQueueActivity.getInstance().togglePlayer(1);
+        });
+
+        hud_mobile.setOnClickListener( view -> {
+            activity.runOnUiThread(() -> { mCalendar.show(); } );
+            view.startAnimation(AnimationUtils.loadAnimation(aactivity, R.anim.button_click));
+        });
+
+        hud_noty.setOnClickListener( view -> {
+            try {
+                NvEventQueueActivity.getInstance().sendCommand(("/notify").getBytes("windows-1251"));
+            } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException(e);
+            }
         });
     }
 

@@ -12,7 +12,7 @@ import swaygames.online.gui.util.Utils;
 import swaygames.online.gui.util.SeekArc;
 import java.util.Formatter;
 
-public class Speedometer {
+public class   Speedometer {
     public Activity activity;
     public TextView mCarHP;
     //public ImageView mStrela;

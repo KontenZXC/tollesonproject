@@ -6,6 +6,10 @@
     <string name="common_google_play_services_needs_enabling_title">An application requires Google Play services to be enabled.</string>
     <string name="common_google_play_services_error_notification_requested_by_msg">Requested by %1$s</string>
     <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_content_description_icon">Иконка</string>
+    <string name="common_get_out">Выйти</string>
+    <string name="common_get">Получить</string>
+    <string name="black_pass_prize_title_1">Заберите награду!</string>
     <string name="common_google_play_services_install_text_phone">"This app won't run without Google Play services, which are missing from your phone."</string>
     <string name="common_google_play_services_install_text_tablet">"This app won't run without Google Play services, which are missing from your tablet."</string>
     <string name="common_google_play_services_install_button">Get Google Play services</string>
@@ -70,11 +74,45 @@
     <string name="time_remaining_notification">%1$s left</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="dialog_join_from_launcher_msg">Вам необходимо зайти в игру используя лаунчер</string>
-    <string name="dialog_join_from_launcher_ok">Принять</string>
     <string name="launcher_privacy_policy_1">Запуская это приложение, Вы соглашаетесь с</string>
     <string name="launcher_privacy_policy_2">Политикой конфиденциальности</string>
     <string name="common_ok">Хорошо</string>
     <string name="common_no">Нет</string>
     <string name="common_close">Закрыть</string>
+    <string name="common_edittext_allowed_characters"><![CDATA[0123456789 .,!@#$€%^&amp;*()+=~?:;[]\'-_/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ]]></string>
+    <string name="dialog_join_from_launcher_msg">Вам необходимо зайти в игру используя лаунчер</string>
+    <string name="dialog_join_from_launcher_ok">Принять</string>
+    <string name="new_menu_setting_button">Расположение кнопок</string>
+    <string name="new_menu_settings_car_button">Способ управления авто</string>
+    <string name="new_menu_settings_joystick_chustvo">Чувствительность джойстика</string>
+    <string name="new_menu_setting_button_change">Изменить</string>
+    <string name="new_menu_settings_joystick">Джойстик</string>
+    <string name="new_menu_setting_HUD">Игровой HUD</string>
+    <string name="new_menu_setting_CHAT">Игровой чат</string>
+    <string name="new_menu_setting_KEYBOARD">Игровая клавиатура</string>
+    <string name="new_menu_setting_NEW">Новый</string>
+    <string name="new_menu_settings_chustvo_hirozantle">Чувствительность обзора камеры по горизонтали</string>
+    <string name="new_menu_settings_chustvo_vertical">Чувствительность обзора камеры по вертикали</string>
+    <string name="new_menu_settings_chustvo_kameru_horizontale">Чувствительность камеры при прицеливании по горизонтали</string>
+    <string name="new_menu_settings_chustvo_kameru_vertical">Чувствительность камеры при прицеливании по вертикали</string>
+    <string name="new_menu_setting_set_default_value">Сбросить настройки</string>
+    <string name="new_menu_setting_parameters_graphics_resolution">Разрешение</string>
+    <string name="new_menu_setting_title_graphics">Настройки графики</string>
+    <string name="new_menu_setting_parameters_graphics_ssaa">SSAA</string>
+    <string name="new_menu_setting_parameters_graphics_max_fps">Максимальный FPS</string>
+    <string name="new_menu_setting_parameters_graphics_vegetation">Качество растительности</string>
+    <string name="new_menu_setting_parameters_graphics_water_quality">Качество воды</string>
+    <string name="new_menu_setting_parameters_winter_slip">Зимнее скольжение (Дрифт)</string>
+    <string name="inv_help_text_1">"Это Ваш инвентарь.
+Выберите ячейку с документами, чтобы
+взаимодействовать с ними.
+Помните, взаимодействие происходит
+только с активным предметом."</string>
+    <string name="inv_help_text_2">Выберите кнопку “Обмен”, чтобы обменяться товаром.</string>
+    <string name="new_menu_setting_parameters_winter_snow_intensity">Интенсивность снега</string>
+    <string name="new_menu_setting_parameters_graphics_reflection_on_car">Качество отражений</string>
+    <string name="new_menu_setting_parameters_graphics_visibility_range">Дальность прорисовки</string>
+    <string name="new_menu_setting_parameters_graphics_shadow_quality">Качество теней</string>
+    <string name="new_menu_setting_parameters_graphics_effects_quality">Качество эффектов</string>
+    <string name="new_menu_setting_smoothing_sub_info">для включения необходимо поставить максимальное разрешение</string>
 </resources>

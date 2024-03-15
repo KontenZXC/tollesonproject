@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: com.tonyodev.fetch2core:fetch2core:3.0.12@aar">
+  <library name="Gradle: com.tonyodev.fetch2core:fetch2core:3.0.12@aar" external-system-id="GRADLE">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1eb890fba7513a3ab2c65713e8f68cd9/transformed/jetified-fetch2core-3.0.12/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1eb890fba7513a3ab2c65713e8f68cd9/transformed/jetified-fetch2core-3.0.12/jars/classes.jar!/" />
